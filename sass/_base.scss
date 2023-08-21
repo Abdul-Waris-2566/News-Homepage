@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  @include respond(tablet) {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  max-width: 111rem;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: hsl(236, 13%, 42%);
+  margin-inline: auto;
+  font-family: "Inter", sans-serif;
+  padding: 0 2rem;
+  @include respond(mobile) {
+    position: relative;
+    overflow-x: hidden;
+    // overflow: hidden;
+  }
+}

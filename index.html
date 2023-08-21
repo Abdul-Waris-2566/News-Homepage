@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#"><img src="./assets/images/logo.svg" alt="" class="logo" /></a>
+      <input type="checkbox" class="checkbox" id="checkbox" />
+      <label
+        for="checkbox"
+        aria-controls="primary-navigation"
+        class="navigation-btn"
+      >
+        <span class="navigation-icon">&nbsp;</span>
+      </label>
+
+      <div class="overlay">&nbsp;</div>
+      <nav class="nav" aria-label="primary-navigation">
+        <ul class="nav__list" role="list" aria-label="primary">
+          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="# " class="nav__link">New </a></li>
+          <li><a href="#" class="nav__link">Popular</a></li>
+          <li><a href="#" class="nav__link">Trending </a></li>
+          <li><a href="#" class="nav__link">Categories</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <div class="hero">
+        <picture class="hero__img">
+          <source
+            srcset="
+              ./assets/images/image-web-3-mobile.jpg 1x,
+              ./assets/images/image-web-3-mobile.jpg 2x
+            "
+            media="(max-width: 50em)"
+          />
+
+          <img
+            srcset="
+              ./assets/images/image-web-3-desktop.jpg 1x,
+              ./assets/images/image-web-3-desktop.jpg 2x
+            "
+            alt="Web 3.0 photo"
+            class="hero__img"
+          />
+        </picture>
+      </div>
+      <h1 class="heading__primary">The Bright Future of Web 3.0?</h1>
+      <div class="hero__text-box">
+        <p>
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+
+      <aside class="news-sidebar">
+        <h2 class="heading__secondary">New</h2>
+        <div class="latest-trends">
+          <h3 class="heading__tertiary">Hydrogen VS Electric Cars</h3>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <div class="latest-trends">
+          <h3 class="heading__tertiary">The Downsides of AI Artistry</h3>
+          <p>
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </div>
+        <div class="latest-trends">
+          <h3 class="heading__tertiary">Is VC Funding Drying Up?</h3>
+          <p>
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </div>
+      </aside>
+      <article class="article">
+        <img
+          src="./assets/images/image-retro-pcs.jpg"
+          alt="Reviving retro PCs "
+          class="article__img"
+        />
+        <div class="article__text-content">
+          <h5 class="numbers">01</h5>
+          <h4 class="heading__quaternary">Reviving Retro PCs</h4>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </article>
+      <article class="article">
+        <img
+          src="./assets/images/image-top-laptops.jpg"
+          alt="Reviving retro PCs "
+          class="article__img"
+        />
+        <div class="article__text-content">
+          <h5 class="numbers">02</h5>
+
+          <h4 class="heading__quaternary">Top 10 Laptops of 2022</h4>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </article>
+      <article class="article">
+        <img
+          src="./assets/images/image-gaming-growth.jpg"
+          alt="Reviving retro PCs "
+          class="article__img"
+        />
+        <div class="article__text-content">
+          <h5 class="numbers">03</h5>
+          <h4 class="heading__quaternary">The Growth of Gaming</h4>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </article>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+<!--         
+    02   03   -->

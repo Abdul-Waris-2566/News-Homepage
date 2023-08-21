@@ -1,0 +1,256 @@
+.heading__primary {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: hsl(240, 100%, 5%);
+  padding-right: 2rem;
+  @include respond(small-tablet) {
+    font-size: 4.2rem;
+  }
+}
+.heading__secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: hsl(35, 77%, 62%);
+  @include respond(small-tablet) {
+    font-size: 3rem;
+  }
+}
+.heading__tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(36, 100%, 99%);
+  @include respond(small-tablet) {
+    font-size: 1.8rem;
+  }
+}
+.heading__quartery {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(240, 100%, 5%);
+}
+
+p {
+  line-height: 1.5;
+}
+
+.btn {
+  &:link,
+  &:visited {
+    color: hsl(36, 100%, 99%);
+    background-color: hsl(5, 85%, 63%);
+    padding: 1.2rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  &:hover,
+  &:active {
+    background-color: black;
+  }
+  @include respond(mobile) {
+    margin-bottom: -1rem;
+  }
+}
+
+.nav {
+  @include respond(mobile) {
+    position: fixed;
+    background-color: white;
+    width: 70%;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    @include respond(mobile) {
+      flex-direction: column;
+      //   justify-content: center;
+      font-size: 1.6rem;
+      padding: 1rem;
+      gap: 2.5rem;
+      margin-top: 15rem;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    padding: 1rem;
+    &:hover,
+    &:active {
+      color: hsl(5, 85%, 63%);
+    }
+  }
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ .navigation-btn .navigation-icon {
+  background-color: transparent;
+}
+.checkbox:checked ~ .navigation-btn .navigation-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.checkbox:checked ~ .navigation-btn .navigation-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.checkbox:checked ~ .overlay {
+  opacity: 1;
+  transform: translateX(0);
+}
+.checkbox:checked ~ .nav {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.navigation-btn {
+  display: none;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  z-index: 999;
+  padding: 1.2rem 0;
+  cursor: pointer;
+  @include respond(mobile) {
+    display: block;
+  }
+}
+.navigation-icon::before,
+.navigation-icon::after,
+.navigation-icon {
+  width: 3.5rem;
+  height: 3px;
+  background-color: black;
+  display: block;
+  position: relative;
+  transition: all 0.3s;
+}
+.navigation-icon::before {
+  content: "";
+  position: absolute;
+  top: -0.8rem;
+}
+.navigation-icon::after {
+  content: "";
+  position: absolute;
+  top: 0.8rem;
+}
+
+.overlay {
+  display: none;
+
+  @include respond(mobile) {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 35vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    opacity: 0;
+  }
+}
+
+.logo {
+  @include respond(mobile) {
+    width: 5rem;
+  }
+}
+
+.hero {
+  grid-column: 1 / span 2;
+
+  &__img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text-box p {
+    margin-bottom: 4rem;
+  }
+}
+
+.news-sidebar {
+  grid-column: 3;
+  grid-row: 1 /3;
+  background-color: hsl(240, 100%, 5%);
+  color: white;
+  padding: 1rem 3rem;
+  padding-top: 3rem;
+  @include respond(small-tablet) {
+    margin: 4rem 0;
+  }
+}
+
+.latest-trends {
+  padding: 2.5rem 0;
+  &:not(:last-child) {
+    border-bottom: 1px solid hsl(233, 8%, 79%);
+  }
+
+  & h3 {
+    margin-bottom: 1.5rem;
+    &:hover {
+      color: hsl(35, 77%, 62%);
+      cursor: pointer;
+    }
+  }
+  & p {
+    font-size: 1.4rem;
+    color: hsl(233, 8%, 79%);
+  }
+}
+
+.article {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  @include respond(small-tablet) {
+    margin-top: 0;
+  }
+
+  &__img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    @include respond(land-tablet) {
+      width: 40%;
+    }
+
+    @include respond(small-tablet) {
+      max-width: 10rem;
+    }
+  }
+
+  &__text-content h4 {
+    margin-bottom: 1.2rem;
+    &:hover,
+    &:active {
+      color: hsl(5, 85%, 63%);
+      cursor: pointer;
+    }
+  }
+  &__text-content h5 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: hsl(233, 8%, 79%);
+  }
+}
